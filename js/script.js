@@ -1,48 +1,35 @@
 // alert('ciao');
 // Scrivi una funzione per capire se la parola è palindroma
+var parolaUtente = prompt('Inserisci una parola');
+console.log(parolaUtente);
+// console.log(parolaUtente[0]);
+// console.log(parolaUtente[1]);
+// console.log(parolaUtente[2]);
+// console.log(parolaUtente[3]);
+// console.log(parolaUtente[4]);
+// console.log(parolaUtente[5]);
+// console.log(parolaUtente[6]);
 
-var listaParole = ['Mario', 'Anna', 'Area', 'Pentola', 'Oro', 'Ombrello'];
-console.log(listaParole);
-var parolaArray = [];
-parolaArray = listaParole.split("");
-console.log(parolaArray);
-var parolaRand = getRandomWord(0, listaParole.length - 1);
-if (listaParole.length == parolaArray)  {
+var parolaAlContrario = giroParola(parolaUtente);
+for (var i = parolaUtente.length - 1; i > 0 ; i--) {
+  parolaAlContrario += parolaUtente[i];
+}
+console.log(parolaAlContrario);
+if(parolaUtente == parolaAlContrario){
   console.log('La parola è un Palindromo');
 }
 else {
-  console.log('La Parola non è un Palindromo');
+  'La Parola non è un Palindromo'
 }
 
-function getRandomWord(min, max) {
-  min= Math.ceil(min);
-  max= Math.floor(max);
-  var random = Math.floor(Math.random() * (max - min + 1) + min);
-  return random;
+function giroParola (parola) {
+  var parolaGirata = '';
+  for (var i = parolaUtente.length - 1; i > 0 ; i--) {
+    var parolaGirata += parola[i];
+  }
+  return parolaGirata;
 }
-
-
-
-
-// var parolaUno = prompt('Inserisci una parola');
-// console.log(parolaUno);
-// var parolaUnoArray = [];
-// parolaUnoArray = parolaUno.split("");
-// console.log(parolaUnoArray);
-// if(parolaUno.length == parolaUnoArray.indexof()) {
-//   console.log('la parola è un palindromo');
-// }
-// else {
-//   console.log('la parola non è un palindromo');
-// }
-
-// function isPalindrom(parola) {
-//   if (parola.length ) {
-//
-//   }
-// }
-
-
+console.log(parolaAlContrario);
 
 
 
