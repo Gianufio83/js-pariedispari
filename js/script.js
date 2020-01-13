@@ -11,10 +11,10 @@ console.log(parolaUtente);
 // console.log(parolaUtente[6]);
 
 var parolaAlContrario = giroParola(parolaUtente);
-for (var i = parolaUtente.length - 1; i > 0 ; i--) {
-  parolaAlContrario += parolaUtente[i];
-}
-console.log(parolaAlContrario);
+// for (var i = parolaUtente.length - 1; i > 0 ; i--) {
+//   parolaAlContrario += parolaUtente[i];
+// }
+// console.log(parolaAlContrario);
 if(parolaUtente == parolaAlContrario){
   console.log('La parola è un Palindromo');
 }
