@@ -48,7 +48,7 @@ var numeroCasuale = getRandomIntInclusive(1,5);
 console.log(numeroCasuale);
 var somma = numeroCasuale + numero;
 console.log(somma);
-if (somma == scelta) {
+if (somma % 0 == scelta) {
   console.log('Hai vinto');
 }
 else {
